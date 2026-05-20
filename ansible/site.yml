@@ -1,0 +1,24 @@
+---
+- hosts: worker1
+  become: yes
+  roles:
+    - jenkins
+
+- hosts: worker2
+  become: yes
+  roles:
+    - docker
+    - kubernetes
+
+- hosts: worker3
+  become: yes
+  roles:
+    - java
+    - docker
+    - kubernetes
+
+- hosts: worker4
+  become: yes
+  roles:
+    - docker
+    - kubernetes
