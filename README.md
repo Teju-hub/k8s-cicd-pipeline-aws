@@ -4,10 +4,12 @@ Automated DevOps pipeline that builds, containerizes, and deploys a web applicat
 to a Kubernetes cluster on AWS using Jenkins, Docker, Ansible, and Terraform.
 
 ## Architecture
+
+```
 Developer → GitHub → Jenkins → DockerHub → Kubernetes Cluster
 ├── Worker2 (pod)
 └── Worker4 (pod)
-
+```
 
 ## Infrastructure (4 EC2 instances)
 
@@ -41,6 +43,7 @@ Developer → GitHub → Jenkins → DockerHub → Kubernetes Cluster
 
 ## Project Structure
 
+```
 k8s-cicd-pipeline-aws/
 ├── terraform/
 │   └── main.tf              # AWS infrastructure
@@ -57,6 +60,7 @@ k8s-cicd-pipeline-aws/
 │   └── service.yaml         # NodePort on 30008
 ├── Dockerfile               # App containerization
 └── Jenkinsfile              # Pipeline definition
+```
 
 ## How to Run
 
@@ -90,8 +94,8 @@ kubeadm join <master-ip>:6443 --token <token> --discovery-token-ca-cert-hash <ha
 - Create Pipeline job pointing to this repo's Jenkinsfile
 
 ### 5. Access the App
-http://<worker2-ip>:30008
-http://<worker4-ip>:30008
+`http://<worker2-ip>:30008`
+`http://<worker4-ip>:30008`
 
 ## Important Notes
 
