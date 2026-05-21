@@ -58,9 +58,12 @@ k8s-cicd-pipeline-aws/
 ├── kubernetes/
 │   ├── deployment.yaml      # 2 replicas deployment
 │   └── service.yaml         # NodePort on 30008
-├── Dockerfile               # App containerization
+├── Dockerfile               # in website repo(App containerization)
 └── Jenkinsfile              # Pipeline definition
 ```
+
+> **Note:** Dockerfile is maintained in the application repository:
+> [github.com/Teju-hub/website](https://github.com/Teju-hub/website)
 
 ## How to Run
 
