@@ -100,6 +100,14 @@ kubeadm join <master-ip>:6443 --token <token> --discovery-token-ca-cert-hash <ha
 `http://<worker2-ip>:30008`
 `http://<worker4-ip>:30008`
 
+## Git Workflow
+
+- `dev` branch — active development
+- `master` branch — production releases only
+- Releases happen on the 25th of every month
+- Jenkins pipeline triggers automatically on master push
+- Scheduled release: cron trigger on 25th of every month
+
 ## Important Notes
 
 - kubeadm join token expires after 24 hours — regenerate with:
